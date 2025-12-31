@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <style>
+        /* Basic styling for the redirecting message */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Redirecting</h1>
+        <p>Please wait a moment...</p>
+    </div>
+
+    <script>
+        // --- Step 1: Add your 5 destination links below ---
+        // Replace the placeholder links with your actual URLs.
+        const destinationLinks = [
+            "https://forms.office.com/r/DKCEF3P73a",   // Link 1
+            //"https://forms.office.com/r/j9Asx8njYc",    // Link 2
+            //"https://forms.office.com/r/1ScccbgYcg", // Link 3
+            //"https://forms.office.com/r/sUTLX6PjzQ",    // Link 4
+            //"https://forms.office.com/r/Ug5fZCPxUm"  // Link 5
+        ];
+
+        /**
+         * This function selects a random link from the array and redirects the browser.
+         */
+        function randomRedirect() {
+            // Get a random index number from 0 to 4
+            const randomIndex = Math.floor(Math.random() * destinationLinks.length);
+            
+            // Get the URL from the array using the random index
+            const randomUrl = destinationLinks[randomIndex];
+            
+            // Redirect the user to the randomly selected URL
+            window.location.href = randomUrl;
+        }
+
+        // --- Step 2: No changes needed below this line ---
+        // Call the function as soon as the page loads.
+        window.onload = randomRedirect;
+    </script>
+
+</body>
+</html>
+
+
